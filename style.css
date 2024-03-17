@@ -1,0 +1,227 @@
+body {
+  background-color: #000;
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Asegura que el cuerpo ocupe toda la altura de la ventana */
+  display: flex;
+  align-items: center; /* Centra verticalmente los elementos en el cuerpo */
+  justify-content: center; /* Centra horizontalmente los elementos en el cuerpo */
+}
+
+#audioPlayer {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 9999; /* Asegúrate de que el reproductor de audio esté por encima de otros elementos */
+}
+
+@keyframes pulsate {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.flower {
+  height: 200px;
+  width: 200px;
+  margin: 20px auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  /* Agrega una animación de pulsación */
+  animation: rotate 25s linear infinite; 
+}
+
+.text-above,
+.text-below {
+    position: absolute;
+    text-align: center;
+    color: #fff; /* Color del texto */
+    font-size: 25px; /* Tamaño del texto */
+}
+
+.text-above {
+    top: -60px; /* Ajusta la posición vertical del texto arriba de la flor */
+}
+
+.text-below {
+    bottom: -60px; /* Ajusta la posición vertical del texto debajo de la flor */
+}
+@keyframes pulsate {
+  0% {
+      transform: scale(1.5);
+  }
+  50% {
+      transform: scale(1.6);
+  }
+  100% {
+      transform: scale(1.5);
+  }
+}
+  .mid {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    
+    background: radial-gradient(circle, #70401c, #ff5e00, #8f5124);
+  
+    z-index: 4;
+  
+    background-size: 5px 5px;
+  
+    filter: drop-shadow(0 0 8px #682600);
+  }
+
+  .Petal1 {
+    position: absolute;
+    left: 40px;
+    z-index: 3;
+  
+    width: 120px;
+    height: 30px;
+    border-radius: 50%;
+  
+    background: radial-gradient(circle, #ff5e00, #ffbb00);
+  
+    filter: drop-shadow(0 0 5px #e05200);
+  }
+  
+  .Petal1.p1 {
+    transform: rotate(22.5deg);
+  }
+  .Petal1.p2 {
+    transform: rotate(67.5deg);
+  }
+  .Petal1.p3 {
+    transform: rotate(110.5deg);
+  }
+  .Petal1.p4 {
+    transform: rotate(157.5deg);
+  }
+  
+  .Petal2 {
+    position: absolute;
+    left: 0;
+    z-index: 2;
+  
+    width: 200px;
+    height: 40px;
+    border-radius: 50%;
+  
+    background: radial-gradient(circle, #ff5e00, #fbd702);
+  
+    filter: drop-shadow(0 0 5px #e05200);
+  }
+  
+  .Petal2.p1 {
+  }
+  
+  .Petal2.p2 {
+    transform: rotate(90deg);
+  }
+  .Petal2.p3 {
+    transform: rotate(45deg);
+  }
+  
+  .Petal2.p4 {
+    transform: rotate(135deg);
+  }
+  
+  .Petal3 {
+    position: absolute;
+    left: 0px;
+    z-index: 1;
+  
+    width: 200px;
+    height: 40px;
+    border-radius: 50%;
+  
+    background: radial-gradient(circle, #ff5e00, #fbd702);
+  
+    filter: drop-shadow(0 0 2px #fbd702);
+  }
+
+  .Petal3.p1 {
+    transform: rotate(22.5deg);
+  }
+  .Petal3.p2 {
+    transform: rotate(67.5deg);
+  }
+  .Petal3.p3 {
+    transform: rotate(110.5deg);
+  }
+  .Petal3.p4 {
+    transform: rotate(157.5deg);
+  }
+
+
+#message1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+}
+
+#message1 img {
+  width: 20%;
+  height: auto;
+}
+
+#message1 p {
+  font-size: 3vw; /* El texto tendrá un tamaño del 40% del ancho de la ventana */
+  color: white; /* Color del texto */
+  margin-top: 20px; /* Espacio superior */
+}
+
+#playButton {
+  width: 150px; /* Ancho del botón */
+  height: 150px; /* Alto del botón */
+  position: relative;
+  cursor: pointer;
+}
+
+.playCircle {
+  width: 100%;
+  height: 100%;
+  border: 2px solid white; /* Grosor y color del borde */
+  border-radius: 50%; /* Para hacer el círculo */
+}
+
+.playTriangle {
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent; /* Ajusta el tamaño y el color del triángulo */
+  border-right: 40px solid transparent; /* Ajusta el tamaño y el color del triángulo */
+  border-top: 50px solid white; /* Ajusta el tamaño y el color del triángulo */
+  position: absolute;
+  top: 50%; /* Posicionamiento vertical del triángulo */
+  left: 55%; /* Posicionamiento horizontal del triángulo */
+  transform: translate(-50%, -50%) rotate(270deg); /* Para posicionar correctamente el triángulo */
+}
+
+#message2 {
+  position: fixed;
+  font-size: 6vh;
+  top: 50%; /* Centrado vertical */
+  left: 50%; /* Centrado horizontal */
+  transform: translate(-50%, -50%);
+  text-align: center; /* Alinear el texto al centro */
+  color: white; /* Color del texto */
+  z-index: 9999;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
